@@ -54,6 +54,10 @@ var modelState = new ModelStateDictionary();
 
 // Act
 var modelBindingResult = await binder.BindModelAsync(new CompositeValueProvider(valueProviders), modelState, parameter);
+
+// Assert
+Assert.True(modelBindingResult.IsModelSet);
+Assert.IsType<Person>(modelBindingResult.Model);
 ```
 
 ### Prerequisites
