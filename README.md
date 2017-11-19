@@ -33,15 +33,15 @@ public class City
 ```csharp
 var binder = IndexModelBinderHelper.GetIndexModelBinder();
 var formCollection = new FormCollection(new Dictionary<string, StringValues>()
-    {
-        { "Name", new [] { "NetCoreStack" } },
-        { "Addresses.index", new [] { "Key1", "Key2" } },
-        { "Addresses[Key1].Street", new [] { "Street1" } },
-        { "Addresses[Key1].City.Name", new [] { "Yalova" } },
-        { "Addresses[Key1].City.Latitude", new [] { "40.631281" } },
-        { "Addresses[Key1].City.Longitude", new [] { "29.286804" } },
-        { "Addresses[Key2].Street", new [] { "Street2" } },
-    });
+{
+    { "Name", new [] { "NetCoreStack" } },
+    { "Addresses.index", new [] { "Key1", "Key2" } },
+    { "Addresses[Key1].Street", new [] { "Street1" } },
+    { "Addresses[Key1].City.Name", new [] { "Yalova" } },
+    { "Addresses[Key1].City.Latitude", new [] { "40.631281" } },
+    { "Addresses[Key1].City.Longitude", new [] { "29.286804" } },
+    { "Addresses[Key2].Street", new [] { "Street2" } },
+});
 
 var valueProviders = IndexModelBinderHelper.GetValueProviders(formCollection);
 var parameter = new ParameterDescriptor()
