@@ -6,13 +6,13 @@ A lot of the code was inspired from ASP.NET Core MVC but this is a complete (and
 
 ### Sample Models
 ```csharp
-private class Person
+public class Person
 {
     public string Name { get; set; }
     public IList<Address> Addresses { get; set; }
 }
 
-private class Address
+public class Address
 {
     public int Zip { get; set; }
 
@@ -21,7 +21,7 @@ private class Address
     public City City { get; set; }
 }
 
-private class City
+public class City
 {
     public string Name { get; set; }
     public float Latitude { get; set; }
